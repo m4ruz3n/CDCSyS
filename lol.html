@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>CDC Systems - Cooperative De-Conflicting</title>
+<meta name="description" content="" />
+<meta property="og:title" content="CDC Systems - Cooperative De-Conflicting" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="" />
+<meta property="og:url" content="" />
+<meta property="og:description" content="CDC Systems - Cooperative De-Conflicting" />
+<!-- <link rel="apple-touch-icon" sizes="57x57" href="img/fav/favicon.png?v=2.1" />
+<link rel="apple-touch-icon" sizes="60x60" href="img/fav/favicon.png?v=2.1" />
+<link rel="apple-touch-icon" sizes="72x72" href="img/fav/favicon.png?v=2.1" />
+<link rel="apple-touch-icon" sizes="76x76" href="img/fav/favicon.png?v=2.1" />
+<link rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-icon-114x114.png?v=2.1" />
+<link rel="apple-touch-icon" sizes="120x120" href="img/fav/apple-icon-120x120.png?v=2.1" />
+<link rel="apple-touch-icon" sizes="144x144" href="img/fav/apple-icon-144x144.png?v=2.1" />
+<link rel="apple-touch-icon" sizes="152x152" href="img/fav/apple-icon-152x152.png?v=2.1" />
+<link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-icon-180x180.png?v=2.1" />
+<link rel="icon" type="image/png" sizes="192x192" href="img/fav/android-icon-192x192.png?v=2.1" />
+<link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon.png?v=2.1" />
+<link rel="icon" type="image/png" sizes="96x96" href="img/fav/favicon.png?v=2.1" />
+<link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon.png?v=2.1" />
+<link rel="manifest" href="img/fav/manifest.json" /> -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<nav class="navbar navbar-fixed-top">
+    <div class="container1">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span> <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img id="logo-orange" src="http://fakeimg.pl/36" />
+                <img id="logo-white" src="http://fakeimg.pl/36" />
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a class="scroll-link" href="#home">Home</a></li>
+                <li><a class="scroll-link" href="#overview">Overview</a></li>
+                <li><a class="scroll-link" href="#technology">Technology</a></li>
+                <li><a class="scroll-link" href="#roadmap">Roadmap</a></li>
+                <li><a class="scroll-link" href="#team">Team</a></li>
+                <li><a class="scroll-link" href="#partners">Partners</a></li>
+                <li class="dropdown hidden-xs">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="scroll-link" href="#faq">FAQ</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Press &amp; Media</a></li>
+                        <li><a class="scroll-link" href="#contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="visible-xs">
+                    <a class="scroll-link" href="#faq">FAQ</a>
+                </li>
+                <li class="visible-xs"><a href="">Careers</a></li>
+                <li class="visible-xs">
+                    <a href="">Shits &amp; Giggles</a>
+                </li>
+                <li class="visible-xs">
+                    <a class="scroll-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right visible-xs visible-lg">
+                <li>
+                    <a href="" target="_blank"><img src="http://fakeimg.pl/16" /> Whitepaper</a>
+                </li>
+                <li>
+                    <a href="" target="_blank"><img src="http://fakeimg.pl/16" /> Telegram</a>
+                </li>
+                <li class="visible-xs">
+                    <a href="" target="_blank"><img src="http://fakeimg.pl/16" /> Medium</a>
+                </li>
+                <li class="visible-md visible-lg btn-top-register">
+                    <form action="/join" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                            <div class="mc-field-group">
+                                <input type="hidden" id="transaction_id" name="transaction_id" />
+                                <input type="hidden" id="referrer" name="referrer" />
+                                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email address" style="width: 66%;display:none;" />
+                            </div>
+                                <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                <input type="text" name="b_8cbc69b6acf3e3436662993bd_6bd28e738d" tabindex="-1" value="" />
+                            </div>
+                            <div class="clear" id="hero-register-button">
+                                <input type="submit" value="Register" name="subscribe" id="mc-embedded-subscribe" class="button" onclick="if (!window.__cfRLUnblockHandlers) return false; ga('send', 'event', 'Register-Top-Click', 'click', 'top_register_click');" style="display:none" data-cf-modified-8d122da103e31be80b570dc6-="" />
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right hidden-xs hidden-lg">
+                <li>
+                    <a href="#" target="_blank"><img src="http://fakeimg.pl/16" /></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="http://fakeimg.pl/16" /></a>
+                </li>
+                <li class="btn-top-register">
+                    <form action="/join" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                            <div class="mc-field-group">
+                                <input type="hidden" id="transaction_id" name="transaction_id" />
+                                <input type="hidden" id="referrer" name="referrer" />
+                                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email address" style="width: 66%;display:none;" />
+                            </div>
+                                <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                <input type="text" name="b_8cbc69b6acf3e3436662993bd_6bd28e738d" tabindex="-1" value="" />
+                            </div>
+                            <div class="clear" id="hero-register-button">
+                                <input type="submit" value="Register" name="subscribe" id="mc-embedded-subscribe" class="button" onclick="if (!window.__cfRLUnblockHandlers) return false; ga('send', 'event', 'Register-Top-Click', 'click', 'top_register_click');" style="display:none" data-cf-modified-8d122da103e31be80b570dc6-="" />
+                            </div>
+                        </div>
+                    </form>
+                </li>
+                <li class="visible-xs">
+                <a href="#" target="_blank"><img src="http://fakeimg.pl/60" /></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="hero hero-ico main-hero" id="home">
+    <div id="startchange"></div>
+    <div class="hero-inner">
+        <div class="hero-valign">
+            <div class="">
+                <div class="row">
+                    <div class="screen1">
+                        <div class="hero-center">
+                            <div class="screen1Cell">
+                                <h1>Exercitation culpa eu .</h1>
+                                <div class="visible-xs airpad"></div>
+                                <h5 class="visible-xs">
+                                    <span>Nostrud irure eu eu ad excepteur Lorem laborum.</span>
+                                </h5>
+                                <h5 class="hidden-xs">
+                                    <span>Laborum laboris exercitation reprehenderit dolore.</span>
+                                    Proident deserunt in labore aliquip qui officia proident excepteur officia tempor commodo velit.
+                                </h5>
+                                <div class="token-sale-announcement ico-start-box">
+                                    <h6>
+                                    Sunt mollit ipsum aute ipsum dolor ex aliqua ut:
+                                    </h6>
+                                    <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate email-form" novalidate>
+                                        <input type="email" value="" name="EMAIL" class="required email email-input" id="mce-EMAIL" placeholder="Email address" />
+                                        <input type="submit" class="button" id="submit-email" value="Subscribe" />
+                                        <div id="error-msg"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="as-seen-on-hero">
+        <h4>As Seen On:</h4>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div class="as-seen-on-logo">
+                        <a href="#" target="_blank"><img src="http://fakeimg.pl/212" /></a>
+                    </div>
+                    <div class="as-seen-on-logo">
+                        <a href="#" target="_blank"><img src="http://fakeimg.pl/212" /></a>
+                    </div>
+                    <div class="as-seen-on-logo">
+                        <a href="#" target="_blank"><img src="http://fakeimg.pl/212" /></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="as-seen-on-logo">
+                        <a href="#" target="_blank"><img src="http://fakeimg.pl/212" /></a>
+                    </div>
+                    <div class="as-seen-on-logo">
+                        <a href="#" target="_blank"><img src="http://fakeimg.pl/212" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="best-brands hide">
+    <h2>Working with us:</h2>
+    <a href="#" target="_blank"><img src="http://fakeimg.pl/30" /></a>
+    <a href="#" target="_blank"><img src="http://fakeimg.pl/30" /></a>
+    <br class="visible-xs" />
+    <a href="#" target="_blank"><img src="http://fakeimg.pl/30" /></a>
+    <a href="#/" target="_blank"><img src="http://fakeimg.pl/30" /></a>
+    <br class="visible-xs" />
+    <a href="#" target="_blank"><img src="http://fakeimg.pl/30" /></a>
+    <a href="#" target="_blank"><img src="http://fakeimg.pl/30" /></a>
+    <br class="visible-xs" />
+    <a href="#" target="_blank"><img src="http://fakeimg.pl/30" /></a>
+    <a href="#" target="_blank"><img src="http://fakeimg.pl/30" /></a>
+</div>
+<div class="video-home" id="overview">
+    <div class="container">
+        <h2>
+        Velit elit eiusmod ut ad mollit nulla officia aute<br />
+        occaecat quis elit sit quis est consequat.
+        </h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="videoWrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oHg5SJYRHA0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>iFrame here</iframe>
+                </div>
+                <p>Overview</p>
+                <br class="visible-xs" />
+                <br class="visible-xs" />
+            </div>
+            <div class="col-sm-6">
+                <div class="videoWrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oHg5SJYRHA0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>iFrame here</iframe>
+                </div>
+                <p>
+                    Ex cupidatat ex enim reprehenderit incididunt veniam commodo anim dolor
+                    &amp; excepteur.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="join-us-orange">
+<h2>Join us</h2>
+    <a href="#" target="_blank" title="NOTHING!"><img src="http://fakeimg.pl/15"></a>
+    <a href="#" target="_blank" title="NOTHING!"><img src="http://fakeimg.pl/15"></a>
+    <a href="#" target="_blank" title="NOTHING!"><img src="http://fakeimg.pl/15"></a>
+    <a href="#" target="_blank" title="NOTHING!"><img src="http://fakeimg.pl/15"></a>
+    <a href="#" target="_blank" title="NOTHING!"><img src="http://fakeimg.pl/15"></a>
+</div>
+<div class="container illustrations">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <h3>
+                Commodo ut voluptate magna reprehenderit qui mollit aliqua officia. Velit et incididunt fugiat tempor sint duis ea. Eiusmod exercitation irure aute ut occaecat nisi irure magna eu. Quis non qui dolore laboris enim enim tempor. Esse Lorem duis qui non consequat. Pariatur tempor cillum id ad incididunt culpa aliqua dolore. Incididunt eiusmod cupidatat deserunt non minim culpa eu exercitation duis.
+            </h3>
+        </div>
+    </div>
+    <h2>Mollit occaecat magna consequat laboris irure incididunt nostrud fugiat nisi amet excepteur sint ipsum.</h2>
+    <div class="row text-center">
+        <div class="col-sm-4">
+            <img src="http://fakeimg.pl/212" />
+            <h4>Do culpa officia non est.</h4>
+            <p>
+            Adipisicing excepteur nostrud ad aliqua et commodo. Commodo sint dolor amet labore fugiat incididunt consectetur mollit. Pariatur deserunt enim id et ea duis. Commodo ad ea pariatur labore veniam ad aliquip dolore.
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <img src="http://fakeimg.pl/212" />
+            <h4>Voluptate ex do quis occaecat aliqua fugiat.</h4>
+            <p>
+                    Adipisicing excepteur nostrud ad aliqua et commodo. Commodo sint dolor amet labore fugiat incididunt consectetur mollit. Pariatur deserunt enim id et ea duis. Commodo ad ea pariatur labore veniam ad aliquip dolore.
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <img src="http://fakeimg.pl/212" />
+            <h4>Officia nostrud eiusmod culpa.</h4>
+            <p>
+                    Adipisicing excepteur nostrud ad aliqua et commodo. Commodo sint dolor amet labore fugiat incididunt consectetur mollit. Pariatur deserunt enim id et ea duis. Commodo ad ea pariatur labore veniam ad aliquip dolore.
+            </p>
+        </div>
+    </div>
+    <div class="breaker"></div>
+    <h2>Eu consequat duis esse amet reprehenderit occaecat irure culpa.</h2>
+    <div class="row text-center">
+        <div class="col-sm-4">
+            <img src="http://fakeimg.pl/212" />
+            <h4>Veniam ad occaecat nisi ex labore cupidatat eiusmod enim culpa nostrud dolor officia.</h4>
+            <p>
+            Labore et quis voluptate et voluptate duis nulla elit commodo sunt ad. Sit pariatur commodo duis eiusmod duis Lorem fugiat irure commodo. Esse quis quis consectetur excepteur aliqua aliqua pariatur cupidatat nisi eu nisi ad proident magna. Et magna et amet proident velit qui occaecat mollit ad. Aliquip labore Lorem Lorem occaecat aliquip labore reprehenderit.
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <img src="http://fakeimg.pl/212" />
+            <h4>Duis occaecat voluptate anim eiusmod dolore excepteur adipisicing aliqua qui Lorem.</h4>
+            <p>
+            Aliqua nostrud aliquip aliqua ut eu sunt Lorem eiusmod aliquip aute. Duis do amet aliquip labore ut duis. Quis magna Lorem esse labore dolor consectetur aliquip Lorem et magna. Duis fugiat ea aute consectetur sunt veniam laborum aliquip consequat adipisicing. Minim Lorem officia quis enim ex do exercitation nostrud labore magna occaecat occaecat dolore laboris. Pariatur commodo labore in tempor anim ex anim adipisicing cupidatat aute esse cupidatat officia. Incididunt excepteur consectetur mollit nostrud laborum culpa reprehenderit et exercitation laboris.
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <img src="http://fakeimg.pl/212" />
+            <h4>Qui ad ullamco consectetur tempor Lorem aliquip aute aliqua.</h4>
+            <p>
+            Sint sunt laborum fugiat exercitation elit cillum in ex in dolore Lorem ex proident. Eu consequat est ad ea laborum ut aliquip. In mollit Lorem pariatur anim excepteur culpa irure quis deserunt.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="blockchain-enables">
+    <div class="container">
+        <h2>Proident aliquip elit:</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <ul>
+                    <li>
+                        Ea dolor sit consectetur tempor sunt culpa non aliqua officia mollit.
+                    </li>
+                    <li>
+                        Labore incididunt officia labore excepteur eu mollit voluptate mollit do duis laboris fugiat non.
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <ul>
+                    <li>
+                        Anim non commodo ullamco ex amet ad veniam mollit consequat consectetur excepteur.
+                    </li>
+                    <li>
+                        Laboris est eu quis cupidatat ut in deserunt sit ipsum labore laborum cillum.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container technologies" id="technology">
+    <div class="row">
+        <div class="col-sm-3"><img src="img/technology1.png" /></div>
+            <div class="col-sm-9">
+                <h4>Ex elit sit labore veniam labore.</h4>
+                <p>
+                    Et est sit culpa sit non incididunt qui aliquip amet pariatur adipisicing nostrud elit reprehenderit. 
+                    Irure id esse enim voluptate labore ea sint quis sunt anim. 
+                    Velit fugiat consequat dolor occaecat ad irure qui cillum est do nostrud.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"><img src="img/technology2.png" /></div>
+            <div class="col-sm-9">
+                <h4>Tempor mollit veniam tempor esse id ex ex exercitation.</h4>
+                <p>
+                    Mollit commodo ex tempor aliquip anim fugiat.
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            Ea dolore commodo dolor culpa reprehenderit consectetur ipsum pariatur proident id consectetur id ea eiusmod.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Non ullamco excepteur nulla eiusmod ipsum.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"><img src="img/technology3.png" /></div>
+            <div class="col-sm-9">
+            <h4>Trustless Cooperation Tools</h4>
+            <p>
+            Cupidatat proident ipsum est exercitation non ex nisi. 
+            Mollit qui consectetur excepteur incididunt. 
+            Nisi exercitation aliqua sint velit et fugiat nulla mollit. 
+            Nisi laboris amet elit non laborum exercitation deserunt occaecat voluptate exercitation tempor nulla ex non. 
+            Aliqua ullamco aliqua ex cupidatat nulla exercitation.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="roadmap" id="roadmap">
+    <h2>Roadmap Plan</h2>
+    <img src="http://fakeimg.pl/500" />
+    <a href="#" target="_blank">Download</a>
+</div>
+<div class="container team" id="team">
+    <h2>Meet the Team</h2>
+    <div class="row team-large">
+        <div class="col-xs-6 col-sm-3 hasVideo">
+            <a href="#modalJohnWayne1" data-toggle="modal" data-target="#modalJohnWayne1">
+                <img src="img/video_icon.png" class="videoIcon" />
+                <img src="http://fakeimg.pl/60" />
+                <div class="row">
+                    <div class="col-xs-10 col-sm-12">
+                        <h4>John Wayne 1</h4>
+                        <h5>Professional Badass</h5>
+                    </div>
+                </div>
+            </a>
+            <div class="advisor-logo">
+                <div class="row">
+                <div class="col-xs-12"><h3>Later Dirty Harry</h3></div>
+                </div>
+            </div>
+            <div class="advisor-quote">
+                <h6>
+                    &ldquo;Go ahead, make my day. Punk.&rdquo;
+                </h6>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 hasVideo">
+            <a href="#modalJohnWayne2" data-toggle="modal" data-target="#modalJohnWayne2">
+                <img src="img/video_icon.png" class="videoIcon" />
+                <img src="http://fakeimg.pl/60" />
+                <div class="row">
+                    <div class="col-xs-10 col-sm-12">
+                        <h4>John Wayne 2</h4>
+                        <h5>Professional Badass</h5>
+                    </div>
+                </div>
+            </a>
+            <div class="advisor-logo">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-2">
+                        <img src="http://fakeimg.pl/30" class="logo-up" />
+                    </div>
+                    <div class="col-xs-9 col-sm-10">
+                        <h3>
+                            Formerly known as Clint Eastwood
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="advisor-quote">
+                <h6>
+                        &ldquo;Go ahead, make my day. Punk.&rdquo;
+                </h6>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+            <a href="#modalJohnWayne3" data-toggle="modal" data-target="#modalJohnWayne3">
+                <img src="http://fakeimg.pl/60" />
+                <div class="row">
+                    <div class="col-xs-10 col-sm-12">
+                        <h4>John Wayne 3</h4>
+                        <h5>Professional Badass</h5>
+                    </div>
+                </div>
+            </a>
+            <div class="advisor-logo">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-2">
+                        <img src="http://fakeimg.pl/30" />
+                    </div>
+                    <div class="col-xs-9 col-sm-10">
+                        <h3>Formerly known as Clint Eastwood</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+                <a href="#modalJohnWayne4" data-toggle="modal" data-target="#modalJohnWayne3">
+                    <img src="http://fakeimg.pl/60" />
+                    <div class="row">
+                        <div class="col-xs-10 col-sm-12">
+                            <h4>John Wayne 4</h4>
+                            <h5>Professional Badass</h5>
+                        </div>
+                    </div>
+                </a>
+                <div class="advisor-logo">
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-2">
+                            <img src="http://fakeimg.pl/30" />
+                        </div>
+                        <div class="col-xs-9 col-sm-10">
+                            <h3>Formerly known as Clint Eastwood</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <h2 class="contributors-title" id="contributors">
+    Our Team of Open Source Contributors
+    </h2>
+    <div class="contributors"></div>
+</div>
+<div class="as-seen-on hide">
+    <div class="container">
+        <h2>As seen on</h2>
+        <div class="row text-center">
+            <div class="col-sm-6">
+                <a href="" target="_blank"><img src=""/></a>
+            </div>
+            <div class="col-sm-6">
+                <a href="" target="_blank"><img src=""/></a>
+            </div>
+            <div class="col-sm-6">
+                <a href="" target="_blank"><img src=""/></a>
+            </div>
+            <div class="col-sm-6">
+                <a href="" target="_blank"><img src=""/></a>
+            </div>
+        </div>
+        <div class="text-right hide">
+            <a href="#">Learn more about our media and press releases
+        <img src="img/circle-right.png" /></a>
+        </div>
+    </div>
+</div>
+<div class="container partners" id="partners">
+    <h2>Strategic Partners</h2>
+    <div class="row">
+        <div class="col-sm-6 col-md-3">
+            <a href="#" target="_blank">
+            <img src="http://fakeimg.pl/60" />
+            </a>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <a href="http://www.amazix.com/" target="_blank">
+            <img src="http://fakeimg.pl/60" />
+            </a>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <a href="http://www.amazix.com/" target="_blank">
+            <img src="http://fakeimg.pl/60" />
+            </a>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <a href="http://www.amazix.com/" target="_blank">
+            <img src="http://fakeimg.pl/60" />
+            </a>
+        </div>
+    </div>
+</div>
+<div class="people-are-talking">
+    <div class="container">
+        <h2>People Are Talking</h2>
+        <div class="row1 slick-gallery">
+            <div>
+                <img src="http://fakeimg.pl/60" />
+                <h3>&nbsp;</h3>
+                <p>
+                &ldquo;Occaecat officia consequat fugiat labore nulla est exercitation sit est. Aliqua pariatur sunt non occaecat adipisicing culpa eu exercitation tempor reprehenderit amet incididunt nulla. Ullamco elit nostrud reprehenderit magna proident commodo amet do ex magna nulla aliquip officia amet. Aliquip minim aliquip nulla velit eu cillum minim anim. Cillum nostrud nulla id veniam ea sunt aliquip velit velit.&rdquo;
+                </p>
+                <a href="#" /></a>
+            </div>
+            <div>
+                <img src="http://fakeimg.pl/60" />
+                <h3>&nbsp;</h3>
+                <p>
+                &ldquo;Duis ullamco eiusmod ipsum et nisi. Ut sint consectetur incididunt nulla laborum amet sunt enim dolore. Veniam laborum elit anim ad sunt consectetur.&rdquo; - Frank Sinatra
+                </p>
+                <a href="#" target="_blank"><span>Read Full Article</span> <img src="http://fakeimg.pl/60" /></a>
+            </div>
+            <div>
+                <img src="http://fakeimg.pl/60" />
+                <h3>&nbsp;</h3>
+                <p>
+                &ldquo;Veniam eu velit aliquip et sit dolore laboris nulla labore voluptate voluptate.&rdquo;
+                </p>
+                <a href="#" target="_blank"><span>Read Full Article</span> <img src="http://fakeimg.pl/60" /></a>
+            </div>
+        </div>
+        <a href="#" class="btn-orange">Visit Shits &amp; Giggles Page</a>
+    </div>
+</div>
+<div class="join-telegram">
+    <h2>Join our community</h2>
+    <a href="#" target="_blank"><img src="http://fakeimg.pl/15" /> Join</a>
+</div>
+<div class="container faq-questions" id="faq">
+    <h2>FAQ</h2>
+    <div class="panel-group" id="accordion-question" role="tablist" aria-multiselectable="true">
+        <div class="panel">
+            <div class="panel-heading" role="tab" id="title1">
+                <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-question" href="#question1" aria-expanded="false" aria-controls="question1">
+                Occaecat ullamco et fugiat sint non ullamco aliqua.
+                </a>
+                </h4>
+            </div>
+            <div id="question1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="title1">
+                <div class="panel-body">
+                    <p>
+                    Cupidatat sint aliqua ut commodo anim laborum nisi qui esse esse non velit Lorem. Ullamco magna aute in eiusmod dolore est excepteur velit fugiat id sunt. Lorem qui esse ullamco minim officia sunt. Nulla mollit pariatur pariatur ex aliquip commodo dolor elit veniam proident. Aliqua tempor veniam qui ipsum exercitation dolor duis pariatur eu in officia pariatur ipsum nulla. Lorem eiusmod nulla veniam ipsum qui culpa elit minim nulla proident dolore sint ipsum cillum.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-heading" role="tab" id="title1">
+                <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-question" href="#question2" aria-expanded="false" aria-controls="question2">
+                Occaecat ullamco et fugiat sint non ullamco aliqua.
+                </a>
+                </h4>
+            </div>
+            <div id="question2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="title2">
+                <div class="panel-body">
+                    <p>
+                    Cupidatat sint aliqua ut commodo anim laborum nisi qui esse esse non velit Lorem. Ullamco magna aute in eiusmod dolore est excepteur velit fugiat id sunt. Lorem qui esse ullamco minim officia sunt. Nulla mollit pariatur pariatur ex aliquip commodo dolor elit veniam proident. Aliqua tempor veniam qui ipsum exercitation dolor duis pariatur eu in officia pariatur ipsum nulla. Lorem eiusmod nulla veniam ipsum qui culpa elit minim nulla proident dolore sint ipsum cillum.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-heading" role="tab" id="title1">
+                <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-question" href="#question3" aria-expanded="false" aria-controls="question3">
+                Occaecat ullamco et fugiat sint non ullamco aliqua.
+                </a>
+                </h4>
+            </div>
+            <div id="question3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="title3">
+                <div class="panel-body">
+                    <p>
+                    Cupidatat sint aliqua ut commodo anim laborum nisi qui esse esse non velit Lorem. Ullamco magna aute in eiusmod dolore est excepteur velit fugiat id sunt. Lorem qui esse ullamco minim officia sunt. Nulla mollit pariatur pariatur ex aliquip commodo dolor elit veniam proident. Aliqua tempor veniam qui ipsum exercitation dolor duis pariatur eu in officia pariatur ipsum nulla. Lorem eiusmod nulla veniam ipsum qui culpa elit minim nulla proident dolore sint ipsum cillum.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <h3>
+        <a href="#" target="_blank">Couldn't find your answers?<br class="visible-xs" />
+        Ask us <img src="http://fakeimg.pl/60" /></a>
+    </h3>
+</div>
+<footer id="contact">
+    <div class="container">
+        <h3>Contact Us</h3>
+        <div class="row links text-center">
+            <div class="col-sm-4">
+                <a href="/cdn-cgi/l/email-protection#432a2d252c032722356d2d2637342c3128"><span class="__cf_email__" data-cfemail="d7beb9b1b897b3b6a1f9b9b2a3a0b8a5bc">[email&#160;protected]</span></a>
+                <p>Partnerships and General Inquiries</p>
+            </div>
+            <div class="col-sm-4">
+                <a href="/cdn-cgi/l/email-protection#fb989a899e9e8988bb9f9a8dd5959e8f8c948990"><span class="__cf_email__" data-cfemail="3e5d5f4c5b5b4c4d7e5a5f4810505b4a49514c55">[email&#160;protected]</span></a>
+                <p>Jobs and CVs</p>
+            </div>
+            <div class="col-sm-4">
+                <a href="/cdn-cgi/l/email-protection#5878282a3d2b2b183c392e76363d2c2f372a33"> <span class="__cf_email__" data-cfemail="d1a1a3b4a2a291b5b0a7ffbfb4a5a6bea3ba">[email&#160;protected]</span></a>
+                <p>Media Inquiries</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-gray">
+        <div class="container">
+            <div class="row about-legal">
+                <div class="col-sm-3 col-xs-6">
+                    <h4>ABOUT</h4>
+                    <a href="#">Things</a>
+                    <a href="#faq">FAQ</a> 
+                    <a href="#">Careers</a>
+                    <a href="#">Shits &amp; Giggles</a>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h4>LEGAL</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Legal Disclaimers</a>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <br class="visible-xs" />
+                    <h4>Join Us</h4>
+                    <div class="social">
+                        <a href="#" target="_blank"><img src="http://fakeimg.pl/60"> FAK-O</a>
+                        <a href="#" target="_blank"><img src="http://fakeimg.pl/60"> FAK-O</a>
+                        <a href="#" target="_blank"><img src="http://fakeimg.pl/60"> FAK-O</a>
+                        <a href="#" target="_blank"><img src="http://fakeimg.pl/60"> FAK-O</a>
+                        <a href="#" target="_blank"><img src="http://fakeimg.pl/60"> FAK-O</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>
+                &copy; Copyright 2019 💩
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="modal team-modal" id="modalJohnWayne1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <br />
+                        <br />
+                        <img src="https://dummyimage.com/212.png" width="100%" />
+                    </div>
+                    <div class="col-sm-8">
+                        <h2>John Wayne 1</h2>
+                        <h5>Professional Badass</h5>
+                        <p>
+                            <span>Sit ea reprehenderit cillum cillum consequat. Cillum amet ex qui amet aute excepteur. Dolor aliqua sit ipsum enim nostrud aute reprehenderit voluptate sint ullamco occaecat nostrud proident eiusmod.</span>
+                            Aliqua nisi consequat Lorem enim nulla minim Lorem nulla culpa officia sunt esse commodo eiusmod. Incididunt reprehenderit elit tempor qui exercitation do ut officia qui. Est ipsum ipsum proident irure. Fugiat ipsum irure ex sit. Do eu enim voluptate sint ipsum eu eu aliquip qui sunt. Occaecat ipsum ipsum nostrud eiusmod voluptate esse aliquip est commodo ipsum aliquip ullamco magna sit. Qui veniam sunt cillum aute occaecat Lorem. Duis laborum enim ipsum aliqua commodo fugiat excepteur consequat duis. Ad nostrud culpa occaecat ad aliqua aute commodo. Cupidatat consequat dolor proident adipisicing et adipisicing officia eiusmod mollit Lorem do consequat. Excepteur pariatur laboris eiusmod magna cillum sit fugiat. Fugiat laboris occaecat tempor labore id laborum ipsum voluptate velit irure.
+                        </p>
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <div class="videoWrapper">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oHg5SJYRHA0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>iFrame here</iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://www.linkedin.com/" target="_blank"><img src="img/icons/linkedin-footer.png" width="25" /></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal team-modal" id="modalJohnWayne2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <br />
+                        <br />
+                        <img src="https://dummyimage.com/212.png" width="100%" />
+                    </div>
+                    <div class="col-sm-8">
+                        <h2>John Wayne 2</h2>
+                        <h5>Professional Badass</h5>
+                        <p>
+                            <span>Sit ea reprehenderit cillum cillum consequat. Cillum amet ex qui amet aute excepteur. Dolor aliqua sit ipsum enim nostrud aute reprehenderit voluptate sint ullamco occaecat nostrud proident eiusmod.</span>
+                            Aliqua nisi consequat Lorem enim nulla minim Lorem nulla culpa officia sunt esse commodo eiusmod. Incididunt reprehenderit elit tempor qui exercitation do ut officia qui. Est ipsum ipsum proident irure. Fugiat ipsum irure ex sit. Do eu enim voluptate sint ipsum eu eu aliquip qui sunt. Occaecat ipsum ipsum nostrud eiusmod voluptate esse aliquip est commodo ipsum aliquip ullamco magna sit. Qui veniam sunt cillum aute occaecat Lorem. Duis laborum enim ipsum aliqua commodo fugiat excepteur consequat duis. Ad nostrud culpa occaecat ad aliqua aute commodo. Cupidatat consequat dolor proident adipisicing et adipisicing officia eiusmod mollit Lorem do consequat. Excepteur pariatur laboris eiusmod magna cillum sit fugiat. Fugiat laboris occaecat tempor labore id laborum ipsum voluptate velit irure.
+                        </p>
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <div class="videoWrapper">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oHg5SJYRHA0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>iFrame here</iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://www.linkedin.com/" target="_blank"><img src="img/icons/linkedin-footer.png" width="25" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal team-modal" id="modalJohnWayne3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <br />
+                                <br />
+                                <img src="https://dummyimage.com/212.png" width="100%" />
+                            </div>
+                            <div class="col-sm-8">
+                                <h2>John Wayne 3</h2>
+                                <h5>Professional Badass</h5>
+                                <p>
+                                    <span>Sit ea reprehenderit cillum cillum consequat. Cillum amet ex qui amet aute excepteur. Dolor aliqua sit ipsum enim nostrud aute reprehenderit voluptate sint ullamco occaecat nostrud proident eiusmod.</span>
+                                    Aliqua nisi consequat Lorem enim nulla minim Lorem nulla culpa officia sunt esse commodo eiusmod. Incididunt reprehenderit elit tempor qui exercitation do ut officia qui. Est ipsum ipsum proident irure. Fugiat ipsum irure ex sit. Do eu enim voluptate sint ipsum eu eu aliquip qui sunt. Occaecat ipsum ipsum nostrud eiusmod voluptate esse aliquip est commodo ipsum aliquip ullamco magna sit. Qui veniam sunt cillum aute occaecat Lorem. Duis laborum enim ipsum aliqua commodo fugiat excepteur consequat duis. Ad nostrud culpa occaecat ad aliqua aute commodo. Cupidatat consequat dolor proident adipisicing et adipisicing officia eiusmod mollit Lorem do consequat. Excepteur pariatur laboris eiusmod magna cillum sit fugiat. Fugiat laboris occaecat tempor labore id laborum ipsum voluptate velit irure.
+                                </p>
+                                <a href="https://www.linkedin.com/" target="_blank"><img src="img/icons/linkedin-footer.png" width="25" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+<div class="modal team-modal" id="modalJohnWayne4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <br />
+                                <br />
+                                <img src="https://dummyimage.com/212.png" width="100%" />
+                            </div>
+                            <div class="col-sm-8">
+                                <h2>John Wayne 4</h2>
+                                <h5>Professional Badass</h5>
+                                <p>
+                                    <span>Sit ea reprehenderit cillum cillum consequat. Cillum amet ex qui amet aute excepteur. Dolor aliqua sit ipsum enim nostrud aute reprehenderit voluptate sint ullamco occaecat nostrud proident eiusmod.</span>
+                                    Aliqua nisi consequat Lorem enim nulla minim Lorem nulla culpa officia sunt esse commodo eiusmod. Incididunt reprehenderit elit tempor qui exercitation do ut officia qui. Est ipsum ipsum proident irure. Fugiat ipsum irure ex sit. Do eu enim voluptate sint ipsum eu eu aliquip qui sunt. Occaecat ipsum ipsum nostrud eiusmod voluptate esse aliquip est commodo ipsum aliquip ullamco magna sit. Qui veniam sunt cillum aute occaecat Lorem. Duis laborum enim ipsum aliqua commodo fugiat excepteur consequat duis. Ad nostrud culpa occaecat ad aliqua aute commodo. Cupidatat consequat dolor proident adipisicing et adipisicing officia eiusmod mollit Lorem do consequat. Excepteur pariatur laboris eiusmod magna cillum sit fugiat. Fugiat laboris occaecat tempor labore id laborum ipsum voluptate velit irure.
+                                </p>
+                                <a href="https://www.linkedin.com/" target="_blank"><img src="img/icons/linkedin-footer.png" width="25" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript" data-cfasync="false"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript" data-cfasync="false"></script>
+</body>
+</html>

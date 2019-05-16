@@ -12,13 +12,13 @@ input {
     position: relative
 }
 
-.makeOrange {
-    color: #ff6a46 !important
+.makeDanube {
+    color: rgba(91, 145, 189, 1) !important
 }
 
-.btn-orange {
+.btn-danube {
     border-radius: 3px;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     color: #FFF;
     font-size: 15px;
     font-weight: 600;
@@ -26,7 +26,7 @@ input {
     padding: 10px 40px
 }
 
-.btn-orange:active, .btn-orange:focus, .btn-orange:hover {
+.btn-danube:active, .btn-danube:focus, .btn-danube:hover {
     text-decoration: none;
     color: #FFF
 }
@@ -52,13 +52,13 @@ input {
 }
 
 .ico-start-box h3 {
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     font-weight: bold;
     margin-bottom: 13px
 }
 
 .ico-start-box h2 {
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     font-weight: bold;
     font-size: 36px;
     margin-top: 8px
@@ -125,13 +125,13 @@ input {
 .ico-start-box form .button {
     width: 33%;
     margin: 0 0 0 4px;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     color: white;
     border-radius: 4px;
     height: 38px;
     line-height: 38px;
     text-align: center;
-    border: 1px solid #ff6a46;
+    border: 1px solid rgba(91, 145, 189, 1);
     font-size: 16px;
     font-weight: bold;
     cursor: pointer
@@ -184,7 +184,7 @@ input {
 
 .navbar .navbar-nav .dropdown-menu li > a:hover {
     background: transparent;
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .navbar.user-scroll .navbar-nav .dropdown a:hover, .navbar.user-scroll .navbar-nav .dropdown a:active,
@@ -211,7 +211,7 @@ input {
 
 .navbar.user-scroll .navbar-nav .dropdown-menu li > a:hover {
     background: transparent;
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .navbar.user-scroll .navbar-nav .dropdown-menu::before {
@@ -233,7 +233,7 @@ input {
 
 .navbar-nav > li > a:hover {
     background: transparent;
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .navbar-nav > li > a:hover, .navbar-nav > li > a:active, .navbar-nav > li > a:focus {
@@ -241,7 +241,7 @@ input {
 }
 
 .navbar-nav > li.btn-top-register #mc-embedded-subscribe {
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     color: #FFF;
     border-radius: 5px;
     padding: 6px 15px;
@@ -270,12 +270,12 @@ input {
 }
 
 .user-scroll li > a {
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     color: #000
 }
 
 .join-github {
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     padding: 40px;
     width: 100%;
     color: white
@@ -294,7 +294,7 @@ input {
     right: -200px;
     left: auto;
     height: 48px;
-    background-color: #ff6a46;
+    background-color: rgba(91, 145, 189, 1);
     z-index: 200;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
@@ -331,13 +331,13 @@ input {
 .telegram-bottom a .fa-telegram {
     vertical-align: top;
     position: relative;
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .telegram-bottom a .fa-telegram::after {
     position: absolute;
     content: '';
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     border-radius: 50%;
     z-index: -1;
     top: 1px;
@@ -377,7 +377,7 @@ input {
 }
 
 .hero {
-    background: #000 url("../img/hero.jpg") no-repeat center;
+    background: #000 url("https://source.unsplash.com/YTk8tO3PGdA/3840x2160") no-repeat center;
     background-size: cover;
     color: #FFF
 }
@@ -415,15 +415,15 @@ input {
 }
 
 .hero .hero-inner .hero-valign h4 .mailchimp-count {
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     display: inline-block;
     min-width: 50px;
     text-align: right
 }
 
-.hero .hero-inner .hero-valign h4.orange-title {
+.hero .hero-inner .hero-valign h4.danube-title {
     font-size: 19px;
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     font-weight: 400;
     margin: 0 0 10px
 }
@@ -474,14 +474,14 @@ input {
 }
 
 .hero .hero-inner .hero-valign .eth-progress .progress .progress-bar {
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     font-weight: 700
 }
 
 .hero .hero-inner .hero-valign .hero-telegram {
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     border-radius: 3px;
     color: #FFF;
     font-size: 15px;
@@ -534,7 +534,7 @@ input {
     border-radius: 3px;
     font-size: 15px;
     font-weight: bold;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     border: none;
     display: block;
     width: 100%;
@@ -542,7 +542,7 @@ input {
 }
 
 .hero .hero-inner .hero-valign .hero-join.makeFix {
-    border-top: 1px solid #ff6a46;
+    border-top: 1px solid rgba(91, 145, 189, 1);
     position: fixed;
     background: #FFF;
     bottom: -17px;
@@ -553,24 +553,24 @@ input {
 }
 
 .hero .hero-inner .hero-valign .hero-join.makeFix input[type=email] {
-    color: #ff6a46;
-    border-color: #ff6a46
+    color: rgba(91, 145, 189, 1);
+    border-color: rgba(91, 145, 189, 1)
 }
 
 .hero .hero-inner .hero-valign .hero-join.makeFix input[type=email]::-webkit-input-placeholder {
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .hero .hero-inner .hero-valign .hero-join.makeFix input[type=email]:-moz-placeholder {
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .hero .hero-inner .hero-valign .hero-join.makeFix input[type=email]::-moz-placeholder {
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .hero .hero-inner .hero-valign .hero-join.makeFix input[type=email]:-ms-input-placeholder {
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .hero .hero-inner a[href='#modalKYCStatus'] {
@@ -636,11 +636,11 @@ input {
     background-size: cover
 }
 
-.hero.hero-ico {
+/* .hero.hero-ico {
     background: #000 url("../img/hero-new.jpg") no-repeat center center;
     background-size: cover;
     overflow: hidden
-}
+} */
 
 .hero.hero-ico .hero-inner {
     position: relative;
@@ -697,11 +697,11 @@ input {
     padding: 10px;
     margin: 10px 35px;
     font-weight: 700;
-    border: 1px solid #ff6a46
+    border: 1px solid rgba(91, 145, 189, 1)
 }
 
 .hero.hero-ico .hero-inner .hero-valign p.restriction span {
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .hero.hero-ico .hero-inner .hero-valign img.hidden-xs {
@@ -738,7 +738,7 @@ input {
 }
 
 .hero.hero-ico .hero-inner .hero-valign .container-transparent h4 span {
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .hero.hero-ico .hero-inner .hero-valign .container-transparent h5 {
@@ -749,7 +749,7 @@ input {
 
 .hero.hero-ico .hero-inner .hero-valign .container-transparent h5 span {
     display: inline-block;
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .hero.hero-ico .hero-inner .hero-valign .container-transparent h6 {
@@ -772,7 +772,7 @@ input {
 }
 
 .hero.hero-ico .hero-inner .hero-valign .container-transparent a {
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .hero.hero-ico .hero-inner .hero-valign .hero-join {
@@ -959,25 +959,25 @@ input {
     width: auto
 }
 
-.join-us-orange {
+.join-us-danube {
     padding: 25px 0 30px;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     text-align: center
 }
 
-.join-us-orange h2 {
+.join-us-danube h2 {
     color: #FFF;
     margin: 0 0 16px;
     font-size: 25px;
     font-weight: 700
 }
 
-.join-us-orange a {
+.join-us-danube a {
     display: inline-block;
     margin: 0 8px
 }
 
-.join-us-orange a img {
+.join-us-danube a img {
     width: 34px
 }
 
@@ -987,7 +987,7 @@ input {
 }
 
 .best-brands h2 {
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     margin: 0 0 75px;
     font-size: 25px;
     font-weight: 700
@@ -1025,7 +1025,7 @@ input {
 
 .refer-dav a {
     border-radius: 3px;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     color: #FFF;
     font-size: 15px;
     font-weight: 600;
@@ -1141,7 +1141,7 @@ input {
 .illustrations h2 {
     text-align: center;
     line-height: 44px;
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 25px;
     font-weight: 700;
     margin: 0 0 40px
@@ -1155,24 +1155,24 @@ input {
     line-height: 32px
 }
 
-.illustrations h3:after {
+.illustrations h2:after {
     content: '';
     display: block;
     width: 300px;
     height: 1px;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     margin: 40px auto 0
 }
 
 .illustrations h4 {
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 16px;
     font-weight: 500;
     margin: 35px 0 15px
 }
 
 .illustrations p {
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 15px;
     font-weight: 300;
     margin: 0
@@ -1204,7 +1204,7 @@ input {
 }
 
 .technology p {
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 15px;
     font-weight: 300;
     margin: 0 auto 35px;
@@ -1228,19 +1228,19 @@ input {
 .technologies h4 {
     font-size: 17px;
     font-weight: 500;
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     margin: 20px 0 30px;
     text-align: left
 }
 
 .technologies ul {
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     padding-left: 20px
 }
 
 .technologies p {
     text-align: left;
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 15px;
     font-weight: 300
 }
@@ -1312,9 +1312,9 @@ input {
     width: 70%
 }
 
-.blockchain-middleman a.btn-orange {
+.blockchain-middleman a.btn-danube {
     border-radius: 3px;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     color: #FFF;
     font-size: 15px;
     font-weight: 600;
@@ -1322,8 +1322,8 @@ input {
     padding: 10px 40px
 }
 
-.blockchain-middleman a.btn-orange:active, .blockchain-middleman a.btn-orange:focus,
-.blockchain-middleman a.btn-orange:hover {
+.blockchain-middleman a.btn-danube:active, .blockchain-middleman a.btn-danube:focus,
+.blockchain-middleman a.btn-danube:hover {
     text-decoration: none
 }
 
@@ -1343,7 +1343,7 @@ input {
 }
 
 .prototypes-section {
-    background: #eeeded
+    background: rgba(64, 74, 71, 0.8)ded
 }
 
 .prototypes-section .container {
@@ -1370,7 +1370,7 @@ input {
 }
 
 .prototypes-section a {
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     color: #FFF;
     padding: 10px 15px;
     font-size: 17px;
@@ -1386,21 +1386,21 @@ input {
 }
 
 .development-tools {
-    background: #eeeded;
+    background: rgba(64, 74, 71, 0.8)ded;
     padding: 46px 0 66px
 }
 
 .development-tools h2 {
     text-align: center;
     line-height: 44px;
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 25px;
     font-weight: 700;
     margin: 0 0 50px
 }
 
 .development-tools h4 {
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 17px;
     font-weight: 500;
     margin: 0 0 -5px;
@@ -1447,7 +1447,7 @@ input {
 }
 
 .roadmap {
-    background: #434343 url("../img/city.jpg") no-repeat center;
+    background: rgba(64, 74, 71, 0.8) url("../img/city.jpg") no-repeat center;
     background-size: cover;
     padding: 60px 0 55px;
     text-align: center
@@ -1470,7 +1470,7 @@ input {
     color: #FFF;
     font-weight: 700;
     font-size: 14px;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     margin: 50px auto 0;
     line-height: 47px;
     height: 47px;
@@ -1490,12 +1490,12 @@ input {
 .dav-alliance .alliance-logo {
     padding-top: 30px;
     margin: 0 auto;
-    border-top: 1px solid #ff6a46
+    border-top: 1px solid rgba(91, 145, 189, 1)
 }
 
 .dav-alliance p {
     font-size: 17px;
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     margin: 35px 0 45px;
     font-weight: 300
 }
@@ -1503,13 +1503,13 @@ input {
 .dav-alliance h4 {
     font-weight: 700;
     font-size: 17px;
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     margin: 45px 0 20px;
     text-align: center
 }
 
 .dav-alliance a.goToAlliance, .dav-alliance a[href='#modalMessage'] {
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     color: #FFF;
     padding: 10px 15px;
     font-size: 17px;
@@ -1543,7 +1543,7 @@ input {
 .dav-alliance input[type=submit] {
     border: none;
     color: #FFF;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     font-weight: 700;
     font-size: 15px;
     border-radius: 3px;
@@ -1674,13 +1674,13 @@ input {
 }
 
 .alliance-modal.team-modal label.error {
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     margin: -10px 0 10px
 }
 
 .alliance-modal.team-modal input[type=submit] {
     border-radius: 3px;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     color: #FFF;
     border: none;
     height: 37px;
@@ -1706,7 +1706,7 @@ input {
 
 .as-seen-on h2 {
     text-align: center;
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 25px;
     font-weight: 700;
     margin: 0 0 50px
@@ -1719,7 +1719,7 @@ input {
 .as-seen-on a {
     display: inline-block;
     margin-top: 20px;
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 15px;
     font-weight: 500
 }
@@ -1738,21 +1738,22 @@ input {
 }
 
 .partners h2 {
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 25px;
     font-weight: 700;
     margin: 0 0 50px;
-    border-top: 1px solid #ff6a46;
+    /* border-top: 1px solid rgba(91, 145, 189, 1); */
     padding-top: 50px
 }
 
 .partners img {
-    height: 115px
+    height: 115px;
+    margin: 25px 0px;
 }
 
 .people-are-talking {
     text-align: center;
-    background: #eee;
+    background: rgba(64, 74, 71, 0.2);
     padding: 60px 0
 }
 
@@ -1761,14 +1762,14 @@ input {
 }
 
 .people-are-talking h2 {
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 25px;
     font-weight: 700;
     margin: 0 0 70px
 }
 
 .people-are-talking h3 {
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 21px;
     font-weight: 700;
     margin: 40px 0 15px
@@ -1793,7 +1794,7 @@ input {
     border-bottom: 1px solid #4c7ce8
 }
 
-.people-are-talking a.btn-orange {
+.people-are-talking a.btn-danube {
     color: #FFF;
     margin-top: 60px
 }
@@ -1824,7 +1825,7 @@ input {
 }
 
 .join-telegram, .crowd-sale {
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     color: #FFF;
     text-align: center;
     padding: 40px 0
@@ -1861,10 +1862,12 @@ input {
 }
 
 .team h2 {
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 25px;
     font-weight: 700;
+    border-top: 1px solid rgba(91, 145, 189, 1);
     margin: 0 0 70px;
+    padding-top: 50px;
     text-align: center
 }
 
@@ -1873,7 +1876,7 @@ input {
     width: 280px;
     width: 224px;
     margin: 0 auto;
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     transition: all 0.5s ease
@@ -1906,7 +1909,7 @@ input {
 .team .team-large h5 {
     font-size: 15px;
     font-weight: 500;
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .team .team-large h6 {
@@ -1923,7 +1926,7 @@ input {
 .team .team-large h3 {
     font-size: 17px;
     font-size: 13px;
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-weight: 300;
     margin: 15px auto 0;
     margin: 0;
@@ -2008,7 +2011,7 @@ input {
     display: block;
     width: 203px;
     margin: 20px auto 50px;
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     transition: all 0.5s ease
@@ -2042,14 +2045,14 @@ input {
 .team .team-medium p {
     font-weight: 300;
     font-size: 15px;
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .team .team-small a {
     display: block;
     width: 100%;
     margin: 20px auto 0px;
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     transition: all 0.5s ease
@@ -2091,7 +2094,7 @@ input {
 .team .team-small p {
     font-weight: 300;
     font-size: 15px;
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     min-height: 44px
 }
 
@@ -2138,7 +2141,7 @@ input {
 
 .contributors ul li a:hover:after {
     content: '';
-    background: url("../img/right-orange-arrow-thick.png") no-repeat center;
+    background: url("../img/right-danube-arrow-thick.png") no-repeat center;
     position: absolute;
     display: block;
     width: 12px;
@@ -2241,7 +2244,7 @@ input {
 }
 
 .fundraising-goals h2 {
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 25px;
     font-weight: 700;
     margin: 0 0 50px;
@@ -2256,7 +2259,7 @@ input {
 .fundraising-goals h4 {
     font-size: 19px;
     font-weight: 500;
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     line-height: 50px;
     margin: 20px 0 30px
 }
@@ -2285,7 +2288,7 @@ input {
     line-height: 60px;
     background: #c7c7bf;
     font-size: 17px;
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     text-align: center
 }
 
@@ -2315,12 +2318,12 @@ input {
 }
 
 .fundraising-goals .not-from-us a {
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .fundraising-goals .not-from-us a.viewTokenInfo {
     border-radius: 3px;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     color: #FFF;
     font-size: 15px;
     font-weight: 500;
@@ -2333,9 +2336,9 @@ input {
     text-decoration: none
 }
 
-.fundraising-goals a.btn-orange {
+.fundraising-goals a.btn-danube {
     border-radius: 3px;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     color: #FFF;
     font-size: 15px;
     font-weight: 500;
@@ -2343,8 +2346,8 @@ input {
     padding: 10px 15px
 }
 
-.fundraising-goals a.btn-orange:active, .fundraising-goals a.btn-orange:focus,
-.fundraising-goals a.btn-orange:hover {
+.fundraising-goals a.btn-danube:active, .fundraising-goals a.btn-danube:focus,
+.fundraising-goals a.btn-danube:hover {
     text-decoration: none
 }
 
@@ -2384,7 +2387,7 @@ input {
 }
 
 .daily-dav h2 {
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 25px;
     font-weight: 700;
     margin: 0 0 50px;
@@ -2392,7 +2395,7 @@ input {
 }
 
 .daily-dav p {
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 15px;
     font-weight: 300;
     margin: 0 0 25px
@@ -2432,7 +2435,7 @@ input {
 }
 
 .faq-questions h2 {
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-size: 25px;
     font-weight: 700;
     margin: 0 0 50px;
@@ -2477,7 +2480,7 @@ input {
 
 .faq-questions .panel .panel-heading .panel-title a {
     font-size: 15px;
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     font-weight: 500;
     display: block;
     padding-right: 50px;
@@ -2503,7 +2506,7 @@ footer {
 }
 
 footer .footer-gray {
-    background: #333333;
+    background: rgba(64, 74, 71, 1);
     padding: 35px 0;
     color: #FFF
 }
@@ -2521,7 +2524,7 @@ footer h3 {
     font-size: 25px;
     font-weight: 700;
     margin: 30px 0 30px;
-    color: #333333;
+    color: rgba(64, 74, 71, 1);
     text-align: center
 }
 
@@ -2604,7 +2607,7 @@ footer .copyright {
     display: inline-block;
     padding: 10px 15px;
     background: #f1f1f2;
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     font-size: 15px;
     font-weight: 500;
     border-radius: 3px
@@ -2624,7 +2627,7 @@ footer .copyright {
 .press-releases article h5 {
     font-size: 15px;
     font-weight: 500;
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .press-releases article p {
@@ -2662,7 +2665,7 @@ footer .copyright {
     display: inline-block;
     padding: 10px 15px;
     background: #f1f1f2;
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     font-size: 15px;
     font-weight: 500;
     border-radius: 3px
@@ -2682,7 +2685,7 @@ footer .copyright {
 }
 
 .media-articles a article h4 {
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     font-size: 19px;
     font-weight: 700;
     margin: 0px;
@@ -2850,7 +2853,7 @@ footer .copyright {
 
 .hero.hero-prototypes a {
     display: block;
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     line-height: 30px;
     font-weight: 700;
     font-size: 16px
@@ -2928,7 +2931,7 @@ footer .copyright {
 .drone-charge a {
     display: block;
     color: #363840;
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     line-height: 30px;
     font-weight: 700;
     font-size: 16px
@@ -2963,7 +2966,7 @@ footer .copyright {
 .drone-flight-planning a {
     display: block;
     color: #363840;
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     line-height: 30px;
     font-weight: 700;
     font-size: 16px
@@ -2989,7 +2992,7 @@ footer .copyright {
 }
 
 .dav-cli {
-    background: #fb6544 url(../img/prototypes/orange-bg.jpg) no-repeat center;
+    background: #fb6544 url(../img/prototypes/danube-bg.jpg) no-repeat center;
     background-size: cover;
     color: #FFF;
     padding-top: 120px
@@ -3037,7 +3040,7 @@ footer .copyright {
 }
 
 .dav-portal {
-    background: #363840 url(../img/prototypes/orange-links.png) no-repeat center bottom;
+    background: #363840 url(../img/prototypes/danube-links.png) no-repeat center bottom;
     background-size: 100%;
     height: 45.71428571428571vw;
     text-align: center
@@ -3080,7 +3083,7 @@ footer .copyright {
 .block-explorer a {
     display: block;
     color: #363840;
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     line-height: 30px;
     font-weight: 700;
     font-size: 16px
@@ -3119,7 +3122,7 @@ footer .copyright {
 
 .mission-control a, .search-rescue a {
     display: block;
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     line-height: 30px;
     font-weight: 700;
     font-size: 16px
@@ -3196,7 +3199,7 @@ footer .copyright {
     display: inline-block;
     padding: 10px 15px;
     background: #f1f1f2;
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     font-size: 15px;
     font-weight: 500;
     border-radius: 3px
@@ -3216,7 +3219,7 @@ footer .copyright {
 .job-list article h5 {
     font-size: 20px;
     font-weight: 700;
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     margin: 0 0 20px
 }
 
@@ -3239,7 +3242,7 @@ footer .copyright {
     display: block;
     width: 50%;
     height: 1px;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     margin: 20px auto 25px
 }
 
@@ -3261,7 +3264,7 @@ footer .copyright {
 .team-modal.job-modal h5 {
     font-size: 20px;
     font-weight: 700;
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     margin: 0 0 20px;
     text-align: center
 }
@@ -3279,7 +3282,7 @@ footer .copyright {
     display: block;
     width: 150px;
     height: 1px;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     margin: 20px auto 25px
 }
 
@@ -3337,7 +3340,7 @@ footer .copyright {
 
 .team-modal.kyc-modal .modal-body h4 {
     font-weight: 700;
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .team-modal.kyc-modal .modal-body p {
@@ -3346,19 +3349,19 @@ footer .copyright {
 
 .team-modal.kyc-modal .modal-body p a {
     margin: 0;
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .team-modal.kyc-modal .modal-body p.kyc-medium a, .team-modal.kyc-modal .modal-body p.kyc-telegram a,
 .team-modal.kyc-modal .modal-body p.kyc-telegram2 a {
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .team-modal.kyc-modal .modal-body button, .team-modal.kyc-modal .modal-body .kyc-button {
     border: none;
     color: #FFF;
     font-weight: 500;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     font-size: 18px;
     border-radius: 3px;
     padding: 10px 20px
@@ -3412,7 +3415,7 @@ footer .copyright {
 }
 
 .peer-to-peer {
-    background: #eeeded url("../img/prototypes/gray-links.png") no-repeat center bottom -100px;
+    background: rgba(64, 74, 71, 0.8)ded url("../img/prototypes/gray-links.png") no-repeat center bottom -100px;
     background-size: 100% auto;
     padding: 60px 0 135px
 }
@@ -3431,7 +3434,7 @@ footer .copyright {
 }
 
 .open-source {
-    background: #eeeded url("../img/blockchain-today/code.jpg") no-repeat center;
+    background: rgba(64, 74, 71, 0.8)ded url("../img/blockchain-today/code.jpg") no-repeat center;
     background-size: cover;
     padding: 45px 0;
     color: #FFF
@@ -3706,7 +3709,7 @@ footer .copyright {
 }
 
 .kyc-top p a {
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .kyc-top .token-details {
@@ -3748,7 +3751,7 @@ footer .copyright {
     display: block;
     width: 150px;
     height: 1px;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     margin-top: 20px;
     margin-bottom: 20px
 }
@@ -3757,13 +3760,13 @@ footer .copyright {
     display: none
 }
 
-.kyc-page h4.orange {
-    color: #ff6a46;
+.kyc-page h4.danube {
+    color: rgba(91, 145, 189, 1);
     text-align: center;
     font-weight: 500
 }
 
-.kyc-page h4.orange:before {
+.kyc-page h4.danube:before {
     display: none
 }
 
@@ -3778,7 +3781,7 @@ footer .copyright {
 
 .kyc-page ol.line-list li::before, .kyc-page ul.line-list li::before {
     content: "\2014";
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     margin-right: 5px
 }
 
@@ -3793,8 +3796,8 @@ footer .copyright {
     margin-right: 5px
 }
 
-.kyc-page ol.orange-list > li::before, .kyc-page ul.orange-list > li::before {
-    color: #ff6a46
+.kyc-page ol.danube-list > li::before, .kyc-page ul.danube-list > li::before {
+    color: rgba(91, 145, 189, 1)
 }
 
 .kyc-page ol.lower-alpha, .kyc-page ul.lower-alpha {
@@ -3860,7 +3863,7 @@ footer .copyright {
 }
 
 .kyc-page p a, .kyc-page li a {
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     text-decoration: underline
 }
 
@@ -3924,7 +3927,7 @@ footer .copyright {
 }
 
 .legal-page p a, .legal-page li a {
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .legal-page li {
@@ -3967,7 +3970,7 @@ footer .copyright {
 .hero.route-creator .hero-inner h1 {
     font-size: 40px;
     font-weight: 700;
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     line-height: 50px;
     padding-top: 30px
 }
@@ -3997,7 +4000,7 @@ footer .copyright {
 }
 
 .hero.route-creator .hero-inner p a {
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     font-size: 19px
 }
 
@@ -4010,14 +4013,14 @@ footer .copyright {
     padding: 0;
     font-weight: 700;
     font-size: 12px;
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .hero.route-creator .hero-inner .waypoint-header p, .hero.route-creator .hero-inner label {
     padding: 0;
     font-weight: 700;
     font-size: 12px;
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .hero.route-creator .hero-inner .waypoint-plus p {
@@ -4068,13 +4071,13 @@ footer .copyright {
 
 .hero.route-creator .hero-inner .waypoint p:before {
     content: "\25CF";
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     margin-right: 5px
 }
 
 .hero.route-creator .hero-inner input[type=submit] {
     display: block;
-    background-color: #ff6a46;
+    background-color: rgba(91, 145, 189, 1);
     color: #FFF;
     border: none;
     width: 100%;
@@ -4088,7 +4091,7 @@ footer .copyright {
 
 .custom-check > label span {
     display: block;
-    border: 1px solid #ff6a46;
+    border: 1px solid rgba(91, 145, 189, 1);
     width: 18px;
     height: 18px;
     float: left;
@@ -4101,7 +4104,7 @@ footer .copyright {
 
 .custom-check input:checked + label span:after {
     content: '\00d7';
-    color: #ff6a46;
+    color: rgba(91, 145, 189, 1);
     font-size: 24px;
     line-height: 16px;
     text-align: center;
@@ -4174,17 +4177,17 @@ footer .copyright {
 }
 
 .station-box.awaiting {
-    border-color: #ff6a46
+    border-color: rgba(91, 145, 189, 1)
 }
 
 .station-box.awaiting span {
-    color: #ff6a46
+    color: rgba(91, 145, 189, 1)
 }
 
 .station-box.awaiting a {
     font-weight: bold;
     color: #FFF;
-    background: #ff6a46;
+    background: rgba(91, 145, 189, 1);
     cursor: pointer
 }
 
@@ -4198,7 +4201,8 @@ footer .copyright {
     }
 
     .navbar-brand {
-        padding: 10px
+        padding: 10px;
+        font-size: 24px;        
     }
 
     .media-gallery .arrow-left.slick-arrow {
@@ -4602,7 +4606,7 @@ footer .copyright {
     }
 
     .navbar-toggle .icon-bar {
-        background: #ff6a46
+        background: rgba(91, 145, 189, 1)
     }
 
     .navbar-fixed-top li > a {
@@ -4673,7 +4677,7 @@ footer .copyright {
         font-size: 12px
     }
 
-    .join-us-orange a {
+    .join-us-danube a {
         margin: 10px 25px
     }
 
@@ -5246,7 +5250,7 @@ footer .copyright {
         display: block
     }
 
-    .people-are-talking a.btn-orange {
+    .people-are-talking a.btn-danube {
         margin-top: -60px
     }
 
@@ -5384,7 +5388,7 @@ footer .copyright {
 }
 
 .team h2 {
-    margin: 40px 0 40px
+    margin: 0 0 50px
 }
 
 .team .team-large a {

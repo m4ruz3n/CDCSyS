@@ -35,6 +35,11 @@ Następna strona
     automated negotiation software
     [Fig: express that the car adopts to your intention]
 
+rgba(64, 74, 71, 0.8) //greygreen
+rgba(91, 145, 189, 1) //blueissh
+rgba(139, 226, 87, 1) //greeny
+
+
 Następna strona
 
 # Our Customers:

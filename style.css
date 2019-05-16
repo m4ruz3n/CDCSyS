@@ -384,7 +384,8 @@ input {
 
 .hero.index2 .hero-inner .hero-valign h1 {
     margin: -40px 0 0;
-    padding: 0
+    padding: 0;
+    
 }
 
 .hero .hero-inner {
@@ -396,7 +397,9 @@ input {
 .hero .hero-inner .hero-valign {
     display: table-cell;
     vertical-align: middle;
-    text-align: center
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
 }
 
 .hero .hero-inner .hero-valign h1 {
@@ -644,7 +647,7 @@ input {
 
 .hero.hero-ico .hero-inner {
     position: relative;
-    z-index: 10
+    z-index: 10;
 }
 
 .hero.hero-ico .hero-inner .hero-valign .token-sale-title h6 {
